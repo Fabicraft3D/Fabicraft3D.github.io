@@ -1,1 +1,127 @@
-Hello World
+<!--
+  Created by Tutorialwork
+  https://YouTube.com/Tutorialwork
+  © 2019 - Modern purple
+-->
+<!DOCTYPE html>
+<html lang="de" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>fabis.works</title>
+    <link rel="stylesheet" href="assets/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400" rel="stylesheet">
+    <script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div class="header-container">
+      <nav>
+        <img src="assets/Fabis.work (2).png" alt="">
+        <ul>
+          
+          <li> <a href="#about">Über mich</a> </li>
+          <li> <a href="#team">Skills</a> </li>
+          <li> <a href="#contact">Kontakt</a> </li>
+        </ul>
+      </nav>
+
+      <div class="header" id="home">
+        <h1>fabis.works</h1>
+        <p>Coding with Quality not Quantity</p>
+      </div>
+    </div>
+
+    <div class="about block-space" id="about">
+      <h1 class="text-gardient">Über mich</h1>
+      <p>Mein Name ist Fabian Stetefeld ich programmiere seit ca. 4 Jahren in Java und<br>
+         seit 2 Jahren LUA ich habe bereits viele Projekte abgeschlossen <br>
+        und bin mitlerweile erfahren in beiden Sprachen. In meiner Freizeit spiele ich Valorant und GTA V.<br>
+         Ich verbringe sehr gerne Zeit mit meinen Freunden und spiele nicht gerne alleine Spiele. Außerdem mag ich Kuscheln. <br> <br>
+         :)
+    </div>
+
+    <div class="team" id="team">
+      <div class="flex-container">
+        <div class="flex-item">
+          <img src="assets/java.png" alt="">
+        </div>
+        <div class="flex-item">
+          <img src="assets/lua.png" alt="">
+        </div>
+        <div class="flex-item">
+          <img src="assets/mysql.png" alt="">
+        </div>
+      </div>
+    </div>
+
+    <div class="contact block-space" id="contact">
+      <h1 class="text-gardient">Kontakt</h1>
+      <div class="flex-container">
+        <div class="flex-item">
+          <a href="http://discord.fabis.works"> <!-- Replace # with the a link -->
+            <img src="assets/discord.png" alt="">
+          </a>
+        </div>
+        <div class="flex-item">
+          <a href="http://github.fabis.works">
+            <img src="assets/github.png" alt="">
+          </a>
+        </div>
+        <div class="flex-item">
+          <a href="https://twitter.com/TheFabicraft3D">
+            <img src="assets/twitter.png" alt="">
+          </a>
+        </div>
+        <div class="flex-item">
+          <a href="#">
+            <img src="assets/youtube.png" alt="">
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <p>&copy; 2022 - fabis.works | <a href="impressum.html">Impressum</a></p>
+      <a href="https://www.flaticon.com/de/kostenlose-icons/java" title="java Icons">Java Icons erstellt von Freepik - Flaticon</a>
+      <br>
+      <a href="https://www.flaticon.com/de/kostenlose-icons/lua" title="lua Icons">Lua Icons erstellt von PIXARTIST - Flaticon</a>
+      <br>
+      <a href="https://www.flaticon.com/de/kostenlose-icons/mysql" title="mysql Icons">Mysql Icons erstellt von Pixel perfect - Flaticon</a>
+      <br>
+      <a href="https://www.flaticon.com/de/kostenlose-icons/github" title="github Icons">Github Icons erstellt von Pixel perfect - Flaticon</a>
+    </footer>
+
+    <script type="text/javascript">
+    $('a[href*="#"]')
+      .not('[href="#"]')
+      .not('[href="#0"]')
+      .click(function(event) {
+        if (
+          location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
+          &&
+          location.hostname == this.hostname
+        ) {
+          var target = $(this.hash);
+          target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+          if (target.length) {
+            event.preventDefault();
+            $('html, body').animate({
+              scrollTop: target.offset().top
+            }, 1000, function() {
+              var $target = $(target);
+              $target.focus();
+              if ($target.is(":focus")) {
+                return false;
+              } else {
+                $target.attr('tabindex','-1');
+                $target.focus();
+              };
+            });
+          }
+        }
+      });
+    </script>
+  </body>
+</html>
